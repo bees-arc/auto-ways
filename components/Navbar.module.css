@@ -1,34 +1,36 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 20px;
+  left: 24px;
+  right: 24px;
+  margin: 0 auto;
+  max-width: var(--max-width);
   z-index: 1000;
-  background-color: transparent;
-  border-bottom: 1px solid transparent;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: var(--transition-smooth);
 }
 
 .scrolled {
-  background-color: var(--navbar-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--navbar-border);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  top: 10px;
+  background-color: #ffffff;
+  border-color: rgba(249, 87, 56, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .navbarContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 20px 24px;
+  width: 100%;
+  padding: 12px 32px;
   transition: var(--transition-smooth);
 }
 
 .scrolled .navbarContainer {
-  padding: 14px 24px;
+  padding: 10px 32px;
 }
 
 .logoLink {
