@@ -1,0 +1,285 @@
+.wrapper {
+  width: 100%;
+}
+
+/* --- PAGE HEADER --- */
+.pageHeader {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--navbar-border);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.pageBadge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.pageTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+  margin-bottom: 12px;
+}
+
+.pageSub {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* --- SERVICES DETAILED GRID --- */
+.servicesDetailedGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+@media (max-width: 768px) {
+  .servicesDetailedGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.serviceCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--transition-smooth);
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(249, 87, 56, 0.2);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.serviceIcon {
+  color: var(--accent);
+  background-color: var(--bg-secondary);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--card-border);
+  flex-shrink: 0;
+}
+
+.serviceTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+}
+
+.serviceDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.bulletListWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid var(--navbar-border);
+  padding-top: 20px;
+}
+
+.bulletListWrapper h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  letter-spacing: 0.5px;
+}
+
+.bulletList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bulletList li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 20px;
+}
+
+.bulletList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+
+/* --- PROCESS SECTION --- */
+.processSection {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--navbar-border);
+  border-bottom: 1px solid var(--navbar-border);
+}
+
+.sectionHeaderCentered {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.sectionTitleCentered {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+  text-align: center;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.processGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.processCard {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.processStep {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent);
+  opacity: 0.2;
+  font-family: var(--font-title), sans-serif;
+  line-height: 1;
+}
+
+.processCard:hover .processStep {
+  opacity: 1;
+  transition: var(--transition-smooth);
+}
+
+.processTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+}
+
+.processDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+
+/* --- FAQ SECTION --- */
+.faqHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faqGrid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+}
+
+
+/* --- CTA SECTION --- */
+.ctaSection {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.ctaContent h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-family: var(--font-title), sans-serif;
+}
+
+.ctaContent p {
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+.ctaBtn {
+  background-color: var(--accent);
+  color: #ffffff;
+  padding: 14px 30px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  box-shadow: 0 4px 14px var(--accent-glow);
+  transition: var(--transition-smooth);
+}
+
+.ctaBtn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 87, 56, 0.4);
+}

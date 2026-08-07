@@ -1,0 +1,404 @@
+.wrapper {
+  width: 100%;
+}
+
+/* --- PAGE HEADER --- */
+.pageHeader {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--navbar-border);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.pageBadge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 1.5px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.pageTitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+  margin-bottom: 12px;
+}
+
+.pageSub {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+/* --- NARRATIVE SECTION --- */
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.storyTextCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.storyTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+  margin-bottom: 10px;
+}
+
+.storyParagraph {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.storyImageCol {
+  display: flex;
+  justify-content: center;
+}
+
+.storyImageContainer {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.storyImage {
+  object-fit: cover;
+  display: block;
+}
+
+.experienceTag {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--card-border);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experienceTag h3 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.1;
+}
+
+.experienceTag span {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+
+/* --- MILESTONE SECTION --- */
+.milestoneSection {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--navbar-border);
+  border-bottom: 1px solid var(--navbar-border);
+}
+
+.milestoneGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .milestoneGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .milestoneGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.milestoneItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.milestoneItem h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent);
+  font-family: var(--font-title), sans-serif;
+  line-height: 1;
+}
+
+.milestoneItem p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+
+/* --- VALUES GRID --- */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.valueCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 40px 30px;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.valueAccentBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
+.valueTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  font-family: var(--font-title), sans-serif;
+}
+
+.valueDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+
+/* --- PLANTS SECTION --- */
+.plantsSection {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--navbar-border);
+  border-bottom: 1px solid var(--navbar-border);
+}
+
+.sectionHeaderCentered {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.sectionTitleCentered {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+  text-align: center;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+}
+
+.plantsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .plantsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.plantCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition-smooth);
+}
+
+.plantCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(249, 87, 56, 0.2);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.plantName {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+}
+
+.plantRole {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plantLocation {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--navbar-border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+
+/* --- TEAM GRID --- */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.teamCard {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+  border-color: rgba(249, 87, 56, 0.2);
+}
+
+.teamAvatarWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.teamAvatar {
+  object-fit: cover;
+}
+
+.teamInfo {
+  padding: 20px;
+  text-align: center;
+}
+
+.teamName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-title), sans-serif;
+  margin-bottom: 2px;
+}
+
+.teamRole {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+/* --- TESTIMONIALS SECTION --- */
+.testimonialsSection {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--navbar-border);
+  border-bottom: 1px solid var(--navbar-border);
+}
+
+/* --- CLIENT LOGOS SECTION --- */
+.clientsSection {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--navbar-border);
+  border-bottom: 1px solid var(--navbar-border);
+  padding: 60px 0;
+}
+
+.clientsSlider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.clientsTrack {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.clientLogoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  filter: grayscale(1);
+  transition: var(--transition-smooth);
+}
+
+.clientLogoWrapper:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+.clientLogo {
+  object-fit: contain;
+}
+
