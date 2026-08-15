@@ -170,102 +170,25 @@ export default function Home() {
 
   return (
     <div className={styles.wrapper}>
-      {/* 1. HERO SECTION (Full screen background image) */}
+      {/* 1. HERO SECTION (Full screen background video) */}
       <section className={styles.hero}>
         <div className={styles.heroBg}>
-          <Image 
-            src="/images/WhatsApp-Image-2025-06-15-at-1.08.27-AM.jpeg" 
-            alt="Autoways Tyre Retreading Hero background"
-            fill
-            priority
-            quality={90}
-            className={styles.heroBgImage}
-          />
+          <iframe
+            src="https://www.youtube.com/embed/hz4Y7fejrTk?autoplay=1&mute=1&loop=1&playlist=hz4Y7fejrTk&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&vq=hd1080&cc_load_policy=3&iv_load_policy=3"
+            title="Autoways Background Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            className={styles.heroBgIframe}
+          ></iframe>
           <div className={styles.heroOverlay}></div>
         </div>
         
-        <div className={styles.heroBentoGrid}>
-          {/* Bento Box 1: Hero Main Copy */}
-          <div className={styles.bentoMainCopy}>
-            <span className={styles.heroTagline}>Sri Lanka’s Trusted Tyre Retreading Partner</span>
+        <div className={styles.heroLayout}>
+          {/* Centered Hero Main Copy */}
+          <div className={styles.heroTextContainer}>
             <h1 className={styles.heroTitle}>Retreading Tyres,<br />Restoring the Future</h1>
             <p className={styles.heroSub}>
               Delivering eco-friendly, cost-effective tyre retreading and tread manufacturing solutions for the transport, agriculture, and construction sectors since 1991.
             </p>
-            <div className={styles.heroActions}>
-              <Link href="/services" className={styles.heroPrimaryBtn}>
-                Get Started
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
-              <Link href="/about" className={styles.heroSecondaryBtn}>
-                <span className={styles.playIcon}>
-                  <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                  </svg>
-                </span>
-                About Us
-              </Link>
-            </div>
-          </div>
-
-          {/* Bento Box 2: Visual Stats with watermark background and SVG blob */}
-          <div className={styles.bentoVisualBlob}>
-            <Image 
-              src="/images/callum-shaw-GW_eq3cFFk8-unsplash-rotated-1.jpg" 
-              alt="Tyre treads watermark background" 
-              fill 
-              className={styles.bentoWatermarkBg}
-            />
-            <div className={styles.blobGlowContainer}>
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className={styles.blobSvg}>
-                <defs>
-                  <linearGradient id="blobGradCard" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="var(--accent)" />
-                    <stop offset="100%" stopColor="#ff8a5c" />
-                  </linearGradient>
-                </defs>
-                <path fill="url(#blobGradCard)" d="M44.7,-76.1C57.4,-69.5,66.8,-56.3,73.4,-42.2C80.1,-28.1,84.1,-14,83.9,-0.1C83.7,13.8,79.4,27.6,72.7,40.1C66.1,52.7,57.1,64,45.2,71.2C33.3,78.5,16.7,81.6,0.3,81.2C-16.1,80.7,-32.2,76.6,-45.5,68.9C-58.7,61.1,-69,49.7,-76.3,36.4C-83.6,23.1,-87.8,7.9,-86.6,-7.1C-85.4,-22.1,-78.8,-36.9,-69.1,-48.5C-59.5,-60.1,-46.8,-68.6,-33.5,-74.8C-20.2,-81.1,-6.3,-85.2,7.3,-84.9C21,-84.6,32.1,-82.7,44.7,-76.1Z" transform="translate(100 100)" />
-              </svg>
-              <div className={styles.blobTextOverlay}>
-                <span>34+ Years</span>
-                <p>Decades of engineering durability and trust</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Bento Box 3: Quick Stats */}
-          <div className={styles.bentoStats}>
-            <div className={styles.bentoStatItem}>
-              <h3>100K+</h3>
-              <p>Tyres Retreaded</p>
-            </div>
-            <div className={styles.bentoStatItem}>
-              <h3>12,000+</h3>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          {/* Bento Box 4: Active Plants Status */}
-          <div className={styles.bentoPlants}>
-            <div className={styles.bentoPlantsHeader}>
-              <span className={styles.pulseDot}></span>
-              <h4>Plants Active</h4>
-            </div>
-            <div className={styles.bentoPlantsList}>
-              <span>Anuradhapura</span>
-              <span>Kandy</span>
-              <span>Kuruwita</span>
-            </div>
-          </div>
-
-          {/* Bento Box 5: Direct Support Link */}
-          <div className={styles.bentoSupport}>
-            <span>Technical Support</span>
-            <a href="tel:+9471419386" className={styles.bentoSupportPhone}>+94 71 4193 86</a>
-            <p>Mon - Sun: 07:00 AM - 07:00 PM</p>
           </div>
         </div>
       </section>
