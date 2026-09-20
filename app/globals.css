@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'Stapel';
+  src: local('Stapel Bold'), local('Stapel-Bold'), local('Stapel'), local('Staple Bold'), local('Staple');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Staple';
+  src: local('Staple Bold'), local('Staple-Bold'), local('Staple'), local('Stapel Bold'), local('Stapel');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;

@@ -2,31 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './page.module.css';
 import TestimonialSlider from '@/components/TestimonialSlider';
-import TeamAvatar from '@/components/TeamAvatar';
 
 export default function About() {
-  const team = [
-    {
-      name: 'Danika Senarathne',
-      role: 'Chief Executive Officer',
-      avatar: '/images/ceo_avatar.png'
-    },
-    {
-      name: 'Danika Senarathne',
-      role: 'Head of Product & R&D',
-      avatar: '/images/rd_avatar.png'
-    },
-    {
-      name: 'Danika Senarathne',
-      role: 'Head of IT & Software',
-      avatar: '/images/it_avatar.png'
-    },
-    {
-      name: 'Danika Senarathne',
-      role: 'Lead Systems Engineer',
-      avatar: '/images/engineer_avatar.png'
-    }
-  ];
 
   const testimonials = [
     {
@@ -175,26 +152,187 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team section */}
-      <section className="section">
+      {/* Executive Leadership / Director & CEO Profile */}
+      <section id="leadership" className="section">
         <div className="container">
           <div className={styles.sectionHeaderCentered}>
-            <span className={styles.pageBadge}>Our Team</span>
-            <h2 className={styles.sectionTitleCentered}>Meet the People Driving Our Innovation</h2>
+            <span className={styles.pageBadge}>Executive Leadership</span>
+            <h2 className={styles.sectionTitleCentered}>Meet Our Director & Chief Executive</h2>
+            <p className={styles.sectionSubtitleCentered}>
+              Steering Autoways with strategic vision, operational discipline, and an enduring commitment to industrial innovation.
+            </p>
           </div>
 
-          <div className={styles.teamGrid}>
-            {team.map((member, idx) => (
-              <div key={idx} className={styles.teamCard}>
-                <div className={styles.teamAvatarWrapper}>
-                  <TeamAvatar role={member.role} />
+          <div className={styles.ceoContainer}>
+            {/* Left Col: Photo Card & Direct Contact Info */}
+            <div className={styles.ceoVisualCol}>
+              <div className={styles.ceoImageCard}>
+                <div className={styles.ceoImageWrapper}>
+                  <Image
+                    src="/images/Profile.png"
+                    alt="Danika Senaratne - Director & CEO"
+                    width={480}
+                    height={600}
+                    priority
+                    className={styles.ceoImage}
+                  />
+                  <div className={styles.ceoExpBadge}>
+                    <span className={styles.ceoExpNumber}>12+</span>
+                    <span className={styles.ceoExpText}>Years Directing Autoways</span>
+                  </div>
                 </div>
-                <div className={styles.teamInfo}>
-                  <h3 className={styles.teamName}>{member.name}</h3>
-                  <p className={styles.teamRole}>{member.role}</p>
+
+                <div className={styles.ceoContactBox}>
+                  <h4 className={styles.ceoContactTitle}>Direct Contact</h4>
+                  <div className={styles.ceoContactList}>
+                    <a href="tel:+94719998782" className={styles.ceoContactItem}>
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                      </svg>
+                      <span>+94 71 9998 782</span>
+                    </a>
+                    <a href="tel:+94777489281" className={styles.ceoContactItem}>
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                      </svg>
+                      <span>+94 77 7489 281</span>
+                    </a>
+                    <a href="mailto:danika@autowayssrilanka.com" className={styles.ceoContactItem}>
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                      </svg>
+                      <span>danika@autowayssrilanka.com</span>
+                    </a>
+                    <div className={styles.ceoContactItem}>
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                      </svg>
+                      <span>273, 16/E Katugastota Road, Kandy</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Right Col: Executive Narrative, Experience, Education & Skills */}
+            <div className={styles.ceoContentCol}>
+              <div className={styles.ceoHeaderBlock}>
+                <span className={styles.ceoRoleTag}>Director — Autoways Private Limited</span>
+                <h3 className={styles.ceoFullName}>Danika Senaratne</h3>
+                <p className={styles.ceoSlogan}>
+                  Leading diverse teams, scaling manufacturing capacity, and engineering sustainable industrial solutions since 2012.
+                </p>
+              </div>
+
+              {/* Profile Bio */}
+              <div className={styles.ceoBioBlock}>
+                <h4 className={styles.blockTitle}>Executive Profile</h4>
+                <p className={styles.ceoBioText}>
+                  Danika Senaratne is an experienced Director with a successful track record of leading diverse teams in the achievement of business objectives. He has extensive experience in developing and implementing strategic plans, managing budgets, and improving operational efficiency.
+                </p>
+                <p className={styles.ceoBioText}>
+                  Danika possesses strong communication and organizational skills and is highly motivated to exceed expectations. A dynamic leader with a strong background in directing and managing teams to ensure premier manufacturing outcomes across the island.
+                </p>
+              </div>
+
+              {/* Work Experience */}
+              <div className={styles.ceoSectionBlock}>
+                <h4 className={styles.blockTitle}>Key Responsibilities & Operations</h4>
+                <div className={styles.experienceCard}>
+                  <div className={styles.expHeader}>
+                    <div>
+                      <h5 className={styles.expPosition}>Director</h5>
+                      <span className={styles.expCompany}>Autoways Private Limited</span>
+                    </div>
+                    <span className={styles.expDuration}>2012 — Present</span>
+                  </div>
+                  <ul className={styles.expList}>
+                    <li>
+                      <span className={styles.bulletIcon}>•</span>
+                      <strong>Factory Operations:</strong> Managing the end-to-end production process across the three factories (Tread Belt, Precured section, Hotcure section, and Flap manufacturing).
+                    </li>
+                    <li>
+                      <span className={styles.bulletIcon}>•</span>
+                      <strong>Market Leadership:</strong> Managing sales and marketing of precured tyres and rebuild tyres in the local market.
+                    </li>
+                    <li>
+                      <span className={styles.bulletIcon}>•</span>
+                      <strong>Financial Governance:</strong> Managing the budgets and other financial divisions to ensure sustainable organizational growth.
+                    </li>
+                    <li>
+                      <span className={styles.bulletIcon}>•</span>
+                      <strong>Innovation & Automation:</strong> Improving operational efficiency through continuous innovation and process automation.
+                    </li>
+                    <li>
+                      <span className={styles.bulletIcon}>•</span>
+                      <strong>Workforce Excellence:</strong> Managing the HR section and ensuring all employees are guided on the right strategic track.
+                    </li>
+                    <li>
+                      <span className={styles.bulletIcon}>•</span>
+                      <strong>Policy & Quality:</strong> Implementing and supervising operational policies and rigorous quality procedures.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Dual Grid: Education & Skills */}
+              <div className={styles.ceoDualGrid}>
+                {/* Education */}
+                <div className={styles.eduCard}>
+                  <h4 className={styles.blockTitle}>
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.titleIcon}>
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                      <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                    Education & Credentials
+                  </h4>
+                  <div className={styles.eduList}>
+                    <div className={styles.eduItem}>
+                      <span className={styles.eduDegree}>Master of Laws (LL.M)</span>
+                      <span className={styles.eduSchool}>Currently Enrolled, ICBT Campus Kandy</span>
+                    </div>
+                    <div className={styles.eduItem}>
+                      <span className={styles.eduDegree}>Bachelor of Business (Major in Management & Marketing)</span>
+                      <span className={styles.eduSchool}>Edith Cowan University, Australia</span>
+                    </div>
+                    <div className={styles.eduItem}>
+                      <span className={styles.eduDegree}>Diploma of Business</span>
+                      <span className={styles.eduSchool}>Australian College of Business & Technology (ACBT)</span>
+                    </div>
+                    <div className={styles.eduItem}>
+                      <span className={styles.eduDegree}>Diploma in International Business</span>
+                      <span className={styles.eduSchool}>Swinburne University of Technology, Australia</span>
+                    </div>
+                    <div className={styles.eduItem}>
+                      <span className={styles.eduDegree}>Certificate Course in Polymer & Tyre Technology</span>
+                      <span className={styles.eduSchool}>Plastics and Rubber Institute (PRI)</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Skills */}
+                <div className={styles.skillsCard}>
+                  <h4 className={styles.blockTitle}>
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.titleIcon}>
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    Core Competencies
+                  </h4>
+                  <div className={styles.skillsTags}>
+                    <span className={styles.skillTag}>Strategic Planning</span>
+                    <span className={styles.skillTag}>Financial Management</span>
+                    <span className={styles.skillTag}>Process Improvement</span>
+                    <span className={styles.skillTag}>Team Leadership</span>
+                    <span className={styles.skillTag}>Operations Management</span>
+                    <span className={styles.skillTag}>Factory Automation</span>
+                    <span className={styles.skillTag}>Quality Assurance</span>
+                    <span className={styles.skillTag}>Supply Chain & Logistics</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

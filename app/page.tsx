@@ -5,7 +5,6 @@ import styles from './page.module.css';
 import Accordion from '@/components/Accordion';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import BackgroundVideo from '@/components/BackgroundVideo';
-import TeamAvatar from '@/components/TeamAvatar';
 
 export default function Home() {
   const stats = [
@@ -107,28 +106,6 @@ export default function Home() {
     }
   ];
 
-  const team = [
-    {
-      name: 'Danika Senarathne',
-      role: 'Chief Executive Officer',
-      avatar: '/images/ceo_avatar.png'
-    },
-    {
-      name: 'Danika Senarathne',
-      role: 'Head of Product & R&D',
-      avatar: '/images/rd_avatar.png'
-    },
-    {
-      name: 'Danika Senarathne',
-      role: 'Head of IT & Software',
-      avatar: '/images/it_avatar.png'
-    },
-    {
-      name: 'Danika Senarathne',
-      role: 'Lead Systems Engineer',
-      avatar: '/images/engineer_avatar.png'
-    }
-  ];
 
   const testimonials = [
     {
@@ -362,29 +339,78 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. TEAM SECTION */}
+      {/* 7. EXECUTIVE LEADERSHIP / CEO'S MESSAGE */}
       <section className="section">
         <div className="container">
           <div className={styles.sectionHeaderCentered}>
-            <span className={styles.sectionBadge}>Our Leaders</span>
-            <h2 className={styles.sectionTitleCentered}>Meet the People Driving Our Innovation</h2>
+            <span className={styles.sectionBadge}>Leadership Message</span>
+            <h2 className={styles.sectionTitleCentered}>Committed to Quality, Built on Integrity</h2>
             <p className={styles.sectionSubtitle}>
-              Our experienced leadership team is dedicated to safety, high-performance materials, and logistics efficiency.
+              A word from our Director on driving industrial resilience, sustainability, and technological progress across Sri Lanka.
             </p>
           </div>
 
-          <div className={styles.teamGrid}>
-            {team.map((member, idx) => (
-              <div key={idx} className={styles.teamCard}>
-                <div className={styles.teamAvatarWrapper}>
-                  <TeamAvatar role={member.role} />
-                </div>
-                <div className={styles.teamInfo}>
-                  <h3 className={styles.teamName}>{member.name}</h3>
-                  <p className={styles.teamRole}>{member.role}</p>
+          <div className={styles.ceoSpotlightCard}>
+            <div className={styles.ceoSpotlightGrid}>
+              <div className={styles.ceoSpotlightImageCol}>
+                <div className={styles.ceoSpotlightImageWrapper}>
+                  <Image
+                    src="/images/Profile.png"
+                    alt="Danika Senaratne - Director, Autoways Private Limited"
+                    width={420}
+                    height={520}
+                    className={styles.ceoSpotlightImage}
+                  />
+                  <div className={styles.ceoSpotlightBadge}>
+                    <span className={styles.ceoSpotlightExp}>Director Since 2012</span>
+                  </div>
                 </div>
               </div>
-            ))}
+
+              <div className={styles.ceoSpotlightContent}>
+                <div className={styles.ceoQuoteIcon}>“</div>
+                <blockquote className={styles.ceoQuoteText}>
+                  At Autoways, our mission extends beyond rebuilding tyres—we are building enduring confidence and sustainable value for Sri Lanka’s transport and industrial sectors. From our three manufacturing facilities in Anuradhapura, Kandy, and Kuruwita, every retreaded unit is manufactured with in-house precision and rigorous quality controls.
+                </blockquote>
+
+                <div className={styles.ceoProfileMeta}>
+                  <h3 className={styles.ceoSpotlightName}>Danika Senaratne</h3>
+                  <p className={styles.ceoSpotlightRole}>Director & CEO — Autoways Private Limited</p>
+                </div>
+
+                <div className={styles.ceoHighlights}>
+                  <div className={styles.ceoHighlightItem}>
+                    <span className={styles.ceoHighlightNumber}>3</span>
+                    <span className={styles.ceoHighlightLabel}>Manufacturing Plants</span>
+                  </div>
+                  <div className={styles.ceoHighlightItem}>
+                    <span className={styles.ceoHighlightNumber}>12+</span>
+                    <span className={styles.ceoHighlightLabel}>Years Directing Autoways</span>
+                  </div>
+                  <div className={styles.ceoHighlightItem}>
+                    <span className={styles.ceoHighlightNumber}>100%</span>
+                    <span className={styles.ceoHighlightLabel}>In-House Formulation</span>
+                  </div>
+                </div>
+
+                <div className={styles.ceoSpotlightActions}>
+                  <Link href="/about#leadership" className={styles.ceoReadMoreBtn}>
+                    <span>Read Full Leadership Profile</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </Link>
+
+                  <a href="tel:+94719998782" className={styles.ceoDirectPhone}>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>+94 71 9998 782</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
