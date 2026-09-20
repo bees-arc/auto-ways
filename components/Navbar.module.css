@@ -8,12 +8,12 @@
   display: flex;
   justify-content: center;
   pointer-events: none;
-  padding: 0;
+  padding: 16px 0 0 0;
   transition: padding 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .scrolled {
-  padding-top: 14px;
+  padding-top: 0;
 }
 
 .navbarContainer {
@@ -21,17 +21,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 16px 36px;
+  width: calc(100% - 48px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 28px;
   background: rgba(255, 255, 255, 0.68);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.7);
   transform: translateZ(0);
   transition: 
     width 0.4s cubic-bezier(0.16, 1, 0.3, 1),
@@ -44,13 +43,16 @@
 }
 
 .scrolled .navbarContainer {
-  width: calc(100% - 48px);
-  max-width: var(--max-width);
-  padding: 12px 28px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 100%;
+  padding: 14px max(32px, calc((100% - var(--max-width)) / 2 + 32px));
+  border-radius: 0;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .logoLink {
@@ -212,21 +214,25 @@
 
 @media (max-width: 768px) {
   .header {
-    padding: 0;
+    padding: 10px 0 0 0;
   }
 
   .scrolled {
-    padding-top: 10px;
+    padding-top: 0;
   }
 
   .navbarContainer {
-    padding: 14px 20px;
-  }
-
-  .scrolled .navbarContainer {
     width: calc(100% - 24px);
     padding: 10px 16px;
     border-radius: 8px;
+    background: rgba(255, 255, 255, 0.75);
+  }
+
+  .scrolled .navbarContainer {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 0;
+    background: #ffffff;
   }
 
   .hamburger {
