@@ -119,19 +119,19 @@
 
 .heroTitle {
   font-size: 4.5rem;
-  font-weight: 900;
-  line-height: 1.08;
+  font-weight: 500;
+  line-height: 1.12;
   color: #ffffff;
-  font-family: 'Stapel', 'Staple', Stapel, Staple, var(--font-title), sans-serif;
-  letter-spacing: -1.5px;
-  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+  font-family: 'Stapel Medium', 'Stapel-Medium', 'Stapel', 'Staple Medium', 'Staple', var(--font-title), sans-serif;
+  letter-spacing: -1px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   text-align: left;
 }
 
 @media (max-width: 1200px) {
   .heroTitle {
     font-size: 3.8rem;
-    letter-spacing: -1.2px;
+    letter-spacing: -0.8px;
   }
 }
 

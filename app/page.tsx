@@ -156,7 +156,9 @@ export default function Home() {
         <div className={styles.heroLayout}>
           {/* Hero Main Copy */}
           <div className={styles.heroTextContainer}>
-            <h1 className={styles.heroTitle}>Retreading Tyres,<br />Restoring the Future</h1>
+            <h1 className={styles.heroTitle}>
+              Retreading Tyres,<br />Restoring the Future
+            </h1>
             <p className={styles.heroSub}>
               Delivering eco-friendly, cost-effective tyre retreading and tread manufacturing solutions for the transport, agriculture, and construction sectors since 1991.
             </p>

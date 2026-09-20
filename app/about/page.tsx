@@ -51,9 +51,28 @@ export default function About() {
       {/* Page Header */}
       <section className={styles.pageHeader}>
         <div className="container">
-          <span className={styles.pageBadge}>About Us</span>
-          <h1 className={styles.pageTitle}>Our Story</h1>
-          <p className={styles.pageSub}>Founded on February 15, 1991, Autoways has grown into a nationwide leader in retreading technology.</p>
+          <div className={styles.pageHeaderLayout}>
+            {/* Left side: Favicon Emblem Logo */}
+            <div className={styles.pageHeaderLogoCol}>
+              <div className={styles.pageHeaderLogoWrapper}>
+                <Image
+                  src="/favicon.svg"
+                  alt="Autoways Logo Emblem"
+                  width={160}
+                  height={160}
+                  priority
+                  className={styles.pageHeaderLogo}
+                />
+              </div>
+            </div>
+
+            {/* Right side: Right-aligned Content */}
+            <div className={styles.pageHeaderContentCol}>
+              <span className={styles.pageBadge}>About Us</span>
+              <h1 className={styles.pageTitle}>Our Story</h1>
+              <p className={styles.pageSub}>Founded on February 15, 1991, Autoways has grown into a nationwide leader in retreading technology.</p>
+            </div>
+          </div>
         </div>
       </section>
 
