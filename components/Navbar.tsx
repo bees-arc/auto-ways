@@ -27,6 +27,21 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Lock body scroll during mobile menu for native iOS app feel
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    };
+  }, [mobileMenuOpen]);
+
   const navItems = [
     { label: 'Home', path: '/' },
     { label: 'About', path: '/about' },
@@ -105,12 +120,13 @@ export default function Navbar() {
         </div>
 
         <nav className={styles.mobileNav}>
-          {navItems.map((item) => {
+          {navItems.map((item, idx) => {
             const isActive = pathname === item.path;
             return (
               <Link 
                 key={item.path} 
                 href={item.path} 
+                style={{ '--i': idx } as React.CSSProperties}
                 className={`${styles.mobileNavLink} ${isActive ? styles.mobileActiveLink : ''}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -120,6 +136,7 @@ export default function Navbar() {
           })}
           <Link 
             href="/contact" 
+            style={{ '--i': navItems.length } as React.CSSProperties}
             className={styles.mobileCta}
             onClick={() => setMobileMenuOpen(false)}
           >
