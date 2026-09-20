@@ -149,12 +149,12 @@ export default function Home() {
 
   return (
     <div className={styles.wrapper}>
-      {/* 1. HERO SECTION (Full screen background video) */}
+      {/* 1. HERO SECTION (Full screen background video with Bottom Stats Bar) */}
       <section className={styles.hero}>
         <BackgroundVideo />
         
         <div className={styles.heroLayout}>
-          {/* Centered Hero Main Copy */}
+          {/* Hero Main Copy */}
           <div className={styles.heroTextContainer}>
             <h1 className={styles.heroTitle}>Retreading Tyres,<br />Restoring the Future</h1>
             <p className={styles.heroSub}>
@@ -162,16 +162,14 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
 
-      {/* 2. STATS SECTION */}
-      <section className={styles.statsSection}>
-        <div className="container">
-          <div className={styles.statsGrid}>
+        {/* Hero Bottom Stats Bar */}
+        <div className={styles.heroStatsWrapper}>
+          <div className={styles.heroStatsGrid}>
             {stats.map((stat, idx) => (
-              <div key={idx} className={styles.statCard}>
-                <h3 className={styles.statValue}>{stat.value}</h3>
-                <p className={styles.statLabel}>{stat.label}</p>
+              <div key={idx} className={styles.heroStatCard}>
+                <h3 className={styles.heroStatValue}>{stat.value}</h3>
+                <p className={styles.heroStatLabel}>{stat.label}</p>
               </div>
             ))}
           </div>
@@ -376,38 +374,6 @@ export default function Home() {
                 <div className={styles.ceoProfileMeta}>
                   <h3 className={styles.ceoSpotlightName}>Danika Senaratne</h3>
                   <p className={styles.ceoSpotlightRole}>Director & CEO — Autoways Private Limited</p>
-                </div>
-
-                <div className={styles.ceoHighlights}>
-                  <div className={styles.ceoHighlightItem}>
-                    <span className={styles.ceoHighlightNumber}>3</span>
-                    <span className={styles.ceoHighlightLabel}>Manufacturing Plants</span>
-                  </div>
-                  <div className={styles.ceoHighlightItem}>
-                    <span className={styles.ceoHighlightNumber}>12+</span>
-                    <span className={styles.ceoHighlightLabel}>Years Directing Autoways</span>
-                  </div>
-                  <div className={styles.ceoHighlightItem}>
-                    <span className={styles.ceoHighlightNumber}>100%</span>
-                    <span className={styles.ceoHighlightLabel}>In-House Formulation</span>
-                  </div>
-                </div>
-
-                <div className={styles.ceoSpotlightActions}>
-                  <Link href="/about#leadership" className={styles.ceoReadMoreBtn}>
-                    <span>Read Full Leadership Profile</span>
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </Link>
-
-                  <a href="tel:+94719998782" className={styles.ceoDirectPhone}>
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                    </svg>
-                    <span>+94 71 9998 782</span>
-                  </a>
                 </div>
               </div>
             </div>

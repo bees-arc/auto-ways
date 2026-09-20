@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Stapel';
-  src: local('Stapel Bold'), local('Stapel-Bold'), local('Stapel'), local('Staple Bold'), local('Staple');
-  font-weight: 700 900;
+  src: local('Stapel Bold'), local('Stapel-Bold'), local('Stapel Black'), local('Stapel-Black'), local('Stapel Heavy'), local('Stapel-Heavy'), local('Stapel ExtraBold'), local('Stapel-ExtraBold'), local('Stapel'), local('Staple Bold'), local('Staple-Bold'), local('Staple');
+  font-weight: 600 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Staple';
-  src: local('Staple Bold'), local('Staple-Bold'), local('Staple'), local('Stapel Bold'), local('Stapel');
-  font-weight: 700 900;
+  src: local('Staple Bold'), local('Staple-Bold'), local('Staple Black'), local('Staple-Black'), local('Staple Heavy'), local('Staple'), local('Stapel Bold'), local('Stapel-Bold'), local('Stapel');
+  font-weight: 600 900;
   font-style: normal;
   font-display: swap;
 }
@@ -37,10 +37,10 @@
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-fast: all 0.15s ease;
   
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-full: 9999px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 8px;
   
   --max-width: 1200px;
 }

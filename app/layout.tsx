@@ -20,6 +20,13 @@ export const metadata: Metadata = {
   title: 'Autoways Private Limited | Sustainable Tyre Retreading & Rebuilding Sri Lanka',
   description: 'Sri Lanka’s trusted leader in tyre retreading, tread manufacturing, and fleet maintenance since 1991. Serving transport, logistics, agriculture, and construction sectors.',
   keywords: 'tyre retreading, tyre rebuilding, autoways, sri lanka, tyre repair, fleet maintenance, tread manufacturing, hot cure, cold cure, anuradhapura',
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'Autoways Private Limited | Tyre Retreading Sri Lanka',
     description: 'Delivering eco-friendly, cost-effective tyre retreading and tread manufacturing solutions.',
