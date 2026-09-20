@@ -1,8 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styles from './page.module.css';
 import TestimonialSlider from '@/components/TestimonialSlider';
+import TeamAvatar from '@/components/TeamAvatar';
 
 export default function About() {
   const team = [
@@ -49,7 +49,7 @@ export default function About() {
     {
       title: 'Our Vision',
       desc: 'To lead the tyre retreading industry with sustainable, cost-effective solutions that keep Sri Lanka moving safely and efficiently.',
-      color: '#f95738'
+      color: '#be1b23'
     },
     {
       title: 'Our Mission',
@@ -109,10 +109,6 @@ export default function About() {
                   height={670} 
                   className={styles.storyImage}
                 />
-                <div className={styles.experienceTag}>
-                  <h3>34</h3>
-                  <span>Years of Trust</span>
-                </div>
               </div>
             </div>
           </div>
@@ -191,12 +187,7 @@ export default function About() {
             {team.map((member, idx) => (
               <div key={idx} className={styles.teamCard}>
                 <div className={styles.teamAvatarWrapper}>
-                  <Image 
-                    src={member.avatar} 
-                    alt={member.name} 
-                    fill 
-                    className={styles.teamAvatar}
-                  />
+                  <TeamAvatar role={member.role} />
                 </div>
                 <div className={styles.teamInfo}>
                   <h3 className={styles.teamName}>{member.name}</h3>

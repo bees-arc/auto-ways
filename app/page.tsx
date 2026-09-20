@@ -4,6 +4,8 @@ import Link from 'next/link';
 import styles from './page.module.css';
 import Accordion from '@/components/Accordion';
 import TestimonialSlider from '@/components/TestimonialSlider';
+import BackgroundVideo from '@/components/BackgroundVideo';
+import TeamAvatar from '@/components/TeamAvatar';
 
 export default function Home() {
   const stats = [
@@ -172,15 +174,7 @@ export default function Home() {
     <div className={styles.wrapper}>
       {/* 1. HERO SECTION (Full screen background video) */}
       <section className={styles.hero}>
-        <div className={styles.heroBg}>
-          <iframe
-            src="https://www.youtube.com/embed/hz4Y7fejrTk?autoplay=1&mute=1&loop=1&playlist=hz4Y7fejrTk&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&vq=hd1080&cc_load_policy=3&iv_load_policy=3"
-            title="Autoways Background Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            className={styles.heroBgIframe}
-          ></iframe>
-          <div className={styles.heroOverlay}></div>
-        </div>
+        <BackgroundVideo />
         
         <div className={styles.heroLayout}>
           {/* Centered Hero Main Copy */}
@@ -383,12 +377,7 @@ export default function Home() {
             {team.map((member, idx) => (
               <div key={idx} className={styles.teamCard}>
                 <div className={styles.teamAvatarWrapper}>
-                  <Image 
-                    src={member.avatar} 
-                    alt={member.name} 
-                    fill 
-                    className={styles.teamAvatar}
-                  />
+                  <TeamAvatar role={member.role} />
                 </div>
                 <div className={styles.teamInfo}>
                   <h3 className={styles.teamName}>{member.name}</h3>

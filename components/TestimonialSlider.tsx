@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
 import styles from './TestimonialSlider.module.css';
 
 interface Testimonial {
@@ -9,7 +8,7 @@ interface Testimonial {
   name: string;
   role: string;
   company: string;
-  avatar: string;
+  avatar?: string;
 }
 
 interface TestimonialSliderProps {
@@ -45,14 +44,19 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
                 <p className={styles.quoteText}>{item.quote}</p>
               </div>
               <div className={styles.authorInfo}>
-                <div className={styles.avatarWrapper}>
-                  <Image 
-                    src={item.avatar || '/images/portrait-9GRRCKT.jpg'} 
-                    alt={item.name} 
-                    width={56} 
-                    height={56} 
-                    className={styles.avatar}
-                  />
+                <div className={styles.avatarWrapper} aria-hidden="true">
+                  <svg 
+                    viewBox="0 0 24 24" 
+                    className={styles.profileIcon}
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="1.8" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  >
+                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
                 </div>
                 <div className={styles.meta}>
                   <h4 className={styles.name}>{item.name}</h4>

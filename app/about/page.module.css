@@ -88,33 +88,7 @@
   display: block;
 }
 
-.experienceTag {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  background-color: var(--bg-primary);
-  border: 1px solid var(--card-border);
-  padding: 16px 24px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--card-shadow);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.experienceTag h3 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--accent);
-  line-height: 1.1;
-}
-
-.experienceTag span {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-}
 
 
 /* --- MILESTONE SECTION --- */
@@ -264,7 +238,7 @@
 
 .plantCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(249, 87, 56, 0.2);
+  border-color: rgba(190, 27, 35, 0.2);
   box-shadow: var(--card-hover-shadow);
 }
 
@@ -323,17 +297,19 @@
 .teamCard:hover {
   transform: translateY(-5px);
   box-shadow: var(--card-hover-shadow);
-  border-color: rgba(249, 87, 56, 0.2);
+  border-color: rgba(190, 27, 35, 0.2);
 }
 
 .teamAvatarWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1;
-}
-
-.teamAvatar {
-  object-fit: cover;
+  aspect-ratio: 1.15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 50%, rgba(190, 27, 35, 0.08) 0%, var(--bg-secondary) 85%);
+  border-bottom: 1px solid var(--card-border);
+  overflow: hidden;
 }
 
 .teamInfo {

@@ -84,7 +84,7 @@
 
 .contactCard:hover {
   transform: translateY(-2px);
-  border-color: rgba(249, 87, 56, 0.2);
+  border-color: rgba(190, 27, 35, 0.2);
   box-shadow: var(--card-hover-shadow);
 }
 
@@ -269,7 +269,7 @@
 .submitBtn:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(249, 87, 56, 0.4);
+  box-shadow: 0 6px 20px rgba(190, 27, 35, 0.4);
 }
 
 
@@ -322,7 +322,7 @@
 
 .locationCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(249, 87, 56, 0.2);
+  border-color: rgba(190, 27, 35, 0.2);
   box-shadow: var(--card-hover-shadow);
 }
 

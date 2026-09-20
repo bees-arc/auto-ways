@@ -14,12 +14,12 @@
 }
 
 .item:hover {
-  border-color: rgba(249, 87, 56, 0.2);
+  border-color: rgba(190, 27, 35, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
 .itemOpen {
-  border-color: rgba(249, 87, 56, 0.3);
+  border-color: rgba(190, 27, 35, 0.3);
   background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
 }

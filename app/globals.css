@@ -6,9 +6,9 @@
   --text-secondary: #495057;
   --text-tertiary: #868e96;
   
-  --accent: #f95738; /* Premium Autoways Orange */
-  --accent-hover: #e03e1d;
-  --accent-glow: rgba(249, 87, 56, 0.15);
+  --accent: #be1b23; /* Autoways Brand Red from Logo */
+  --accent-hover: #9e131a;
+  --accent-glow: rgba(190, 27, 35, 0.2);
   
   --card-bg: #ffffff;
   --card-border: rgba(0, 0, 0, 0.06);

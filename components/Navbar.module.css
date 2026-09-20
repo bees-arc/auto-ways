@@ -16,7 +16,7 @@
 .scrolled {
   top: 10px;
   background-color: #ffffff;
-  border-color: rgba(249, 87, 56, 0.15);
+  border-color: rgba(190, 27, 35, 0.15);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
@@ -103,7 +103,7 @@
 .ctaButton:hover {
   background-color: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(249, 87, 56, 0.3);
+  box-shadow: 0 6px 20px rgba(190, 27, 35, 0.3);
 }
 
 /* Hamburger menu button */
