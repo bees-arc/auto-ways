@@ -1,39 +1,44 @@
 @font-face {
   font-family: 'Stapel Medium';
-  src: local('Stapel Medium'), local('Stapel-Medium'), local('Stapel-Med'), local('StapelMedium'),
-       url('/fonts/Stapel-Medium.woff2') format('woff2'),
+  src: url('/fonts/Stapel-Medium.woff2') format('woff2'),
        url('/fonts/Stapel-Medium.woff') format('woff'),
        url('/fonts/Stapel-Medium.ttf') format('truetype'),
-       url('/fonts/Stapel-Medium.otf') format('opentype'),
-       local('Stapel'), local('Staple Medium'), local('Staple');
-  font-weight: 400 600;
+       url('/fonts/Stapel-Medium.eot') format('embedded-opentype'),
+       local('Stapel Medium'), local('Stapel-Medium');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Stapel';
-  src: local('Stapel Medium'), local('Stapel-Medium'), local('Stapel-Med'), local('StapelMedium'),
-       url('/fonts/Stapel-Medium.woff2') format('woff2'),
+  font-family: 'Stapel-Medium';
+  src: url('/fonts/Stapel-Medium.woff2') format('woff2'),
+       url('/fonts/Stapel-Medium.woff') format('woff'),
        url('/fonts/Stapel-Medium.ttf') format('truetype'),
-       local('Stapel'), local('Staple Medium'), local('Staple');
-  font-weight: 500;
+       url('/fonts/Stapel-Medium.eot') format('embedded-opentype');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Stapel';
-  src: local('Stapel Bold'), local('Stapel-Bold'), local('Stapel Black'), local('Stapel-Black'), local('Stapel Heavy'), local('Stapel-Heavy'), local('Stapel ExtraBold'), local('Stapel-ExtraBold'), local('Stapel'), local('Staple Bold'), local('Staple-Bold'), local('Staple');
-  font-weight: 600 900;
+  src: url('/fonts/Stapel-Medium.woff2') format('woff2'),
+       url('/fonts/Stapel-Medium.woff') format('woff'),
+       url('/fonts/Stapel-Medium.ttf') format('truetype'),
+       url('/fonts/Stapel-Medium.eot') format('embedded-opentype'),
+       local('Stapel Medium'), local('Stapel-Medium'), local('Stapel');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Staple';
-  src: local('Stapel Medium'), local('Staple Medium'), local('Staple-Medium'), local('Stapel Bold'), local('Staple Bold'), local('Stapel'), local('Staple');
-  font-weight: 400 900;
+  src: url('/fonts/Stapel-Medium.woff2') format('woff2'),
+       url('/fonts/Stapel-Medium.woff') format('woff'),
+       url('/fonts/Stapel-Medium.ttf') format('truetype');
+  font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
@@ -67,8 +72,14 @@
   --radius-full: 8px;
   
   --max-width: 1200px;
+  
+  /* Titles use Stapel Medium, all body text uses Inter / standard sans */
+  --font-title: 'Stapel Medium', 'Stapel-Medium', 'Stapel', var(--font-outfit), sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+}
 
 * {
   box-sizing: border-box;

@@ -122,7 +122,7 @@
   font-weight: 500;
   line-height: 1.12;
   color: #ffffff;
-  font-family: 'Stapel Medium', 'Stapel-Medium', 'Stapel', 'Staple Medium', 'Staple', var(--font-title), sans-serif;
+  font-family: 'Stapel Medium', 'Stapel-Medium', 'Stapel', var(--font-title), sans-serif;
   letter-spacing: -1px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
   text-align: left;
