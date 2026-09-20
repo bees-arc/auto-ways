@@ -142,6 +142,14 @@
   }
 }
 
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.2rem;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+}
+
 .heroSub {
   font-size: 1.2rem;
   line-height: 1.65;
@@ -307,10 +315,15 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 110px 0 24px 0;
+    min-height: 100svh;
+    padding: 96px 0 28px 0;
+  }
+  .heroLayout {
+    padding: 16px 20px 24px 20px;
+    gap: 16px;
   }
   .heroStatsWrapper {
-    padding: 0 16px;
+    padding: 0 16px 12px 16px;
   }
   .heroStatsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -435,36 +448,84 @@
 .aboutImageCol {
   display: flex;
   justify-content: center;
-}
-
-.imageCard {
-  position: relative;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 40px;
-  box-shadow: var(--card-shadow);
-  display: flex;
-  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-.badgeImage {
-  object-fit: contain;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.06));
+.aboutImageGrid {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 380px;
 }
 
-.badgeDecor {
+.gridImageWrapper1 {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--accent);
-  color: #ffffff;
-  font-weight: 700;
-  padding: 8px 16px;
-  border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  box-shadow: 0 4px 10px var(--accent-glow);
+  top: 0;
+  left: 0;
+  width: 68%;
+  height: 68%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  border: 3px solid #ffffff;
+  z-index: 1;
+}
+
+.gridImageWrapper2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 58%;
+  height: 72%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
+  border: 3px solid #ffffff;
+  z-index: 2;
+}
+
+.gridImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .aboutImageGrid {
+    max-width: 100%;
+    height: 240px;
+    margin-top: 12px;
+  }
+
+  .gridImageWrapper1 {
+    width: 62%;
+    height: 84%;
+    border-width: 2px;
+  }
+
+  .gridImageWrapper2 {
+    width: 54%;
+    height: 82%;
+    border-width: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutImageGrid {
+    height: 200px;
+  }
+
+  .gridImageWrapper1 {
+    width: 64%;
+    height: 86%;
+  }
+
+  .gridImageWrapper2 {
+    width: 54%;
+    height: 84%;
+  }
 }
 
 

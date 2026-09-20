@@ -81,6 +81,29 @@ export default function Navbar() {
 
       {/* Mobile Navigation Drawer */}
       <div className={`${styles.mobileMenu} ${mobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+        <div className={styles.mobileMenuHeader}>
+          <Link href="/" className={styles.logoLink} onClick={() => setMobileMenuOpen(false)}>
+            <Image 
+              src="/images/Group-5.svg" 
+              alt="Autoways Logo" 
+              width={130} 
+              height={30} 
+              priority
+              className={styles.logo}
+            />
+          </Link>
+          <button 
+            className={styles.closeBtn} 
+            onClick={() => setMobileMenuOpen(false)} 
+            aria-label="Close navigation menu"
+          >
+            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2.2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
         <nav className={styles.mobileNav}>
           {navItems.map((item) => {
             const isActive = pathname === item.path;
