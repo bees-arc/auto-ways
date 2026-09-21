@@ -51,6 +51,7 @@ export default function Footer() {
             <li><Link href="/" className={styles.footerLink}>Home</Link></li>
             <li><Link href="/about" className={styles.footerLink}>About</Link></li>
             <li><Link href="/services" className={styles.footerLink}>Services</Link></li>
+            <li><Link href="/specifications" className={styles.footerLink}>Specifications</Link></li>
             <li><Link href="/contact" className={styles.footerLink}>Contact</Link></li>
           </ul>
         </div>
