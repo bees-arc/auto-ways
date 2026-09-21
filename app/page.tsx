@@ -395,6 +395,7 @@ export default function Home() {
       </section>
 
       {/* 8.5 CLIENT LOGOS SECTION */}
+      {/*
       <section className={`${styles.clientsSection} section`}>
         <div className="container">
           <div className={styles.clientsSlider}>
@@ -414,6 +415,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      */}
 
       {/* 9. FAQs SECTION */}
       <section className="section">
