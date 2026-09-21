@@ -368,6 +368,7 @@ export default function About() {
       </section>
 
       {/* Client Logos */}
+      {/*
       <section className={`${styles.clientsSection} section`}>
         <div className="container">
           <div className={styles.clientsSlider}>
@@ -387,6 +388,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      */}
     </div>
 
   );
