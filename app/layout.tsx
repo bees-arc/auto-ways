@@ -17,6 +17,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.autoways.lk'),
   title: 'Autoways Private Limited | Sustainable Tyre Retreading & Rebuilding Sri Lanka',
   description: 'Sri Lanka’s trusted leader in tyre retreading, tread manufacturing, and fleet maintenance since 1991. Serving transport, logistics, agriculture, and construction sectors.',
   keywords: 'tyre retreading, tyre rebuilding, autoways, sri lanka, tyre repair, fleet maintenance, tread manufacturing, hot cure, cold cure, anuradhapura',
