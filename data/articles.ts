@@ -47,7 +47,7 @@ export const articles: Article[] = [
     author: {
       name: 'Autoways Corporate Communications',
       role: 'International Trade & Export Affairs',
-      avatar: '/images/ceo_avatar.png'
+      avatar: '/images/Profile.png'
     },
     featured: true,
     thumbnail: '/images/expo/expo_7.jpg',
@@ -149,10 +149,10 @@ export const articles: Article[] = [
     author: {
       name: 'Autoways Engineering Team',
       role: 'Rubber Chemical Compounding Division',
-      avatar: '/images/ceo_avatar.png'
+      avatar: '/images/Profile.png'
     },
     featured: false,
-    thumbnail: '/images/article_compounding.jpg',
+    thumbnail: '/images/article_retread_machine.jpg',
     coverBadge: 'Technical Deep Dive',
     excerpt: 'Discover how precision compounding, Banbury internal mixers, and formulated cushion gum provide up to 50% cost savings for commercial fleets while drastically reducing carbon footprint.',
     keyTakeaways: [
@@ -208,19 +208,59 @@ export const articles: Article[] = [
     ]
   },
   {
+    slug: 'commercial-tread-pattern-selection-guide',
+    title: 'Commercial Tread Pattern Selection: TBR, S-LUG, and Highway Treads Compared',
+    subtitle: 'Choosing the right tread geometry for fuel economy, wet asphalt braking, and off-road quarry durability.',
+    category: 'Fleet Maintenance',
+    publishedDate: 'September 10, 2026',
+    readTime: '5 min read',
+    author: {
+      name: 'Autoways Technical Services',
+      role: 'Pattern Engineering & Fleet Division',
+      avatar: '/images/Profile.png'
+    },
+    featured: false,
+    thumbnail: '/images/article_tyre_buffing.jpg',
+    coverBadge: 'Tread Catalogue Guide',
+    excerpt: 'Analyze the performance trade-offs between directional ribs, deep-lug traction designs, and multi-angle siping to optimize fleet cost-per-kilometer.',
+    keyTakeaways: [
+      'Rib-style patterns (D1, RTS, High WAY) maximize fuel efficiency and lateral stability on high-speed paved expressways.',
+      'Lug patterns (S LUG, J LUG) offer superior torque transfer in muddy agricultural and quarry environments.',
+      'Selecting the correct pattern for steer, drive, and trailer axles avoids premature irregular heel-and-toe wear.'
+    ],
+    tags: ['Tread Catalogue', 'TBR Tyres', 'S-LUG', 'Highway Treads', 'Fuel Efficiency'],
+    sections: [
+      {
+        heading: '1. Axle Geometry and Tread Physics',
+        paragraphs: [
+          'Every axle position on a commercial vehicle subjects a tyre to fundamentally different stress vectors. Steer axles demand high directional precision and rapid water evacuation to prevent hydroplaning; drive axles require robust torque transmission without rib tearing; and trailer axles must withstand severe lateral scrubbing during tight turns.',
+          'Matching the appropriate tread pattern from the Autoways catalogue ensures that tyres wear evenly down to the minimum allowable depth without sacrificing driver comfort or braking safety.'
+        ]
+      },
+      {
+        heading: '2. Rib vs. Lug Patterns: When to Specify Each',
+        paragraphs: [
+          'D1 & High WAY Treads: Featuring continuous circumferential grooves and dense siping, these patterns offer minimal rolling resistance, quiet operation, and enhanced fuel economy. Ideal for long-distance highway transport and passenger coaches.',
+          'S LUG & J LUG Patterns: Incorporating deep transverse grooves and heavy-duty shoulder blocks, these patterns deliver biting traction in soft soil, mud, gravel roads, and construction sites.',
+          'TBR (Truck Bus and Radial): A versatile all-wheel pattern offering a balanced compromise between drive traction and highway endurance.'
+        ]
+      }
+    ]
+  },
+  {
     slug: 'why-tyre-inner-flaps-are-critical-for-heavy-commercial-rims',
     title: 'Why High-Density Tyre Inner Flaps Are Critical for Heavy Commercial Rims',
     subtitle: 'Understanding the protective shield that stops rim friction, dissipates brake heat, and prevents catastrophic tube blowouts.',
-    category: 'Fleet Maintenance',
-    publishedDate: 'September 10, 2026',
+    category: 'Industry & Sustainability',
+    publishedDate: 'August 28, 2026',
     readTime: '4 min read',
     author: {
       name: 'Autoways Quality Assurance',
       role: 'Manufacturing & Testing Division',
-      avatar: '/images/rd_avatar.png'
+      avatar: '/images/Profile.png'
     },
     featured: false,
-    thumbnail: '/images/article_flaps.jpg',
+    thumbnail: '/images/WhatsApp-Image-2025-06-15-at-1.08.26-AM-1.jpeg',
     coverBadge: 'Component Engineering',
     excerpt: 'A comprehensive engineering overview on how 15", 16", and 20" rubber inner flaps isolate inner tubes from abrasive metal rim edges, preventing friction punctures and pressure drops.',
     keyTakeaways: [
@@ -251,46 +291,6 @@ export const articles: Article[] = [
           '• 20” Flap (1.850 Kg): Engineered for heavy commercial haulage, container trailers, and SLTB commuter buses.',
           '• 16” Flap (1.150 Kg): Designed for medium-duty distribution trucks and regional delivery vehicles.',
           '• 15” Flap (0.825 Kg): Calibrated for light commercial trucks, agricultural trailers, and utility vans.'
-        ]
-      }
-    ]
-  },
-  {
-    slug: 'commercial-tread-pattern-selection-guide',
-    title: 'Commercial Tread Pattern Selection: TBR, S-LUG, and Highway Treads Compared',
-    subtitle: 'Choosing the right tread geometry for fuel economy, wet asphalt braking, and off-road quarry durability.',
-    category: 'Industry & Sustainability',
-    publishedDate: 'August 28, 2026',
-    readTime: '5 min read',
-    author: {
-      name: 'Autoways Technical Services',
-      role: 'Pattern Engineering Division',
-      avatar: '/images/engineer_avatar.png'
-    },
-    featured: false,
-    thumbnail: '/images/article_treads.jpg',
-    coverBadge: 'Tread Catalogue Guide',
-    excerpt: 'Analyze the performance trade-offs between directional ribs, deep-lug traction designs, and multi-angle siping to optimize fleet cost-per-kilometer.',
-    keyTakeaways: [
-      'Rib-style patterns (D1, RTS, High WAY) maximize fuel efficiency and lateral stability on high-speed paved expressways.',
-      'Lug patterns (S LUG, J LUG) offer superior torque transfer in muddy agricultural and quarry environments.',
-      'Selecting the correct pattern for steer, drive, and trailer axles avoids premature irregular heel-and-toe wear.'
-    ],
-    tags: ['Tread Catalogue', 'TBR Tyres', 'S-LUG', 'Highway Treads', 'Fuel Efficiency'],
-    sections: [
-      {
-        heading: '1. Axle Geometry and Tread Physics',
-        paragraphs: [
-          'Every axle position on a commercial vehicle subjects a tyre to fundamentally different stress vectors. Steer axles demand high directional precision and rapid water evacuation to prevent hydroplaning; drive axles require robust torque transmission without rib tearing; and trailer axles must withstand severe lateral scrubbing during tight turns.',
-          'Matching the appropriate tread pattern from the Autoways catalogue ensures that tyres wear evenly down to the minimum allowable depth without sacrificing driver comfort or braking safety.'
-        ]
-      },
-      {
-        heading: '2. Rib vs. Lug Patterns: When to Specify Each',
-        paragraphs: [
-          'D1 & High WAY Treads: Featuring continuous circumferential grooves and dense siping, these patterns offer minimal rolling resistance, quiet operation, and enhanced fuel economy. Ideal for long-distance highway transport and passenger coaches.',
-          'S LUG & J LUG Patterns: Incorporating deep transverse grooves and heavy-duty shoulder blocks, these patterns deliver biting traction in soft soil, mud, gravel roads, and construction sites.',
-          'TBR (Truck Bus and Radial): A versatile all-wheel pattern offering a balanced compromise between drive traction and highway endurance.'
         ]
       }
     ]
