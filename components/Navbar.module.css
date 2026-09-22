@@ -355,7 +355,7 @@
   transition-delay: calc(0.06s + var(--i) * 0.055s);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .header {
     padding: 10px 0 0 0;
   }
@@ -376,6 +376,12 @@
     padding: 12px 20px;
     border-radius: 0;
     background: #ffffff;
+  }
+
+  .mobileRightActions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .hamburger {

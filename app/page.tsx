@@ -5,6 +5,7 @@ import styles from './page.module.css';
 import Accordion from '@/components/Accordion';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import BackgroundVideo from '@/components/BackgroundVideo';
+import { articles } from '@/data/articles';
 
 export default function Home() {
   const stats = [
@@ -416,6 +417,56 @@ export default function Home() {
         </div>
       </section>
       */}
+
+      {/* 8.8 ARTICLES & TECHNICAL INSIGHTS SECTION */}
+      <section className={`${styles.articlesSection} section`}>
+        <div className="container">
+          <div className={styles.sectionHeaderCentered}>
+            <span className={styles.sectionBadge}>Knowledge &amp; Engineering</span>
+            <h2 className={styles.sectionTitleCentered}>Latest Technical Insights</h2>
+            <p className={styles.sectionDescCentered}>
+              Explore chemical compounding research, tyre inner flap mechanics, and retreading engineering from our manufacturing plants.
+            </p>
+          </div>
+
+          <div className={styles.articlesHomeGrid}>
+            {articles.slice(0, 3).map((article) => (
+              <article key={article.slug} className={styles.homeArticleCard}>
+                <div className={styles.homeArticleHeader}>
+                  <span className={styles.homeArticleBadge}>{article.coverBadge}</span>
+                  <span className={styles.homeArticleReadTime}>{article.readTime}</span>
+                </div>
+                <span className={styles.homeArticleCategory}>{article.category}</span>
+                <h3 className={styles.homeArticleTitle}>
+                  <Link href={`/articles/${article.slug}`}>
+                    {article.title}
+                  </Link>
+                </h3>
+                <p className={styles.homeArticleExcerpt}>{article.excerpt}</p>
+                <div className={styles.homeArticleFooter}>
+                  <span className={styles.homeArticleDate}>{article.publishedDate}</span>
+                  <Link href={`/articles/${article.slug}`} className={styles.homeArticleLink}>
+                    <span>Read Article</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className={styles.viewAllArticlesWrapper}>
+            <Link href="/articles" className={styles.viewAllArticlesBtn}>
+              <span>Explore All Technical Articles</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* 9. FAQs SECTION */}
       <section className="section">

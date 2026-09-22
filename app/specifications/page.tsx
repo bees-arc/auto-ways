@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './page.module.css';
 import { tyreSpecifications, TyreSpecification } from '@/data/specifications';
 import { generateSpecsPDF } from '@/utils/generateSpecsPdf';
@@ -66,7 +67,18 @@ export default function SpecificationsPage() {
     <div className={styles.wrapper}>
       {/* Page Header */}
       <section className={styles.pageHeader}>
-        <div className="container">
+        {/* Right-hand side Tyre Track Mark */}
+        <div className={styles.tyreTrackOverlay} aria-hidden="true">
+          <Image
+            src="/images/white-tyre-track.jpg"
+            alt="Tyre Track"
+            fill
+            priority
+            className={styles.tyreTrackImg}
+          />
+        </div>
+
+        <div className={`container ${styles.headerContainer}`}>
           <div className={styles.breadcrumb}>
             <Link href="/" className={styles.breadcrumbLink}>Home</Link>
             <span className={styles.breadcrumbDivider}>/</span>
