@@ -22,10 +22,16 @@ export const metadata: Metadata = {
   keywords: 'tyre retreading, tyre rebuilding, autoways, sri lanka, tyre repair, fleet maintenance, tread manufacturing, hot cure, cold cure, anuradhapura',
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
     title: 'Autoways Private Limited | Tyre Retreading Sri Lanka',
