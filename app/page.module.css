@@ -1379,7 +1379,8 @@
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 0;
+  overflow: hidden;
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
@@ -1389,7 +1390,48 @@
 .homeArticleCard:hover {
   transform: translateY(-5px);
   box-shadow: var(--card-hover-shadow);
-  border-color: rgba(190, 27, 35, 0.2);
+  border-color: rgba(190, 27, 35, 0.25);
+}
+
+.homeArticleThumbnailWrapper {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  background-color: #1a1a1c;
+  overflow: hidden;
+}
+
+.homeArticleThumbnail {
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.homeArticleCard:hover .homeArticleThumbnail {
+  transform: scale(1.06);
+}
+
+.homeArticleBadgeOverlay {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(190, 27, 35, 0.92);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.homeArticleBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .homeArticleHeader {
@@ -1397,17 +1439,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
-}
-
-.homeArticleBadge {
-  background-color: rgba(190, 27, 35, 0.08);
-  color: var(--accent);
-  font-size: 0.74rem;
-  font-weight: 700;
-  padding: 3px 8px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  letter-spacing: 0.4px;
 }
 
 .homeArticleReadTime {

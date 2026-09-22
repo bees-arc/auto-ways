@@ -97,42 +97,54 @@ export default function ArticlesPage() {
           {/* Featured Article Highlight (when not actively filtered out) */}
           {selectedCategory === 'All' && !searchQuery && (
             <div className={styles.featuredContainer}>
-              <div className={styles.featuredBadgeRow}>
-                <span className={styles.featuredPill}>Featured Story</span>
-                <span className={styles.featuredCategory}>{featuredArticle.category}</span>
-              </div>
-              <h2 className={styles.featuredTitle}>
-                <Link href={`/articles/${featuredArticle.slug}`}>
-                  {featuredArticle.title}
-                </Link>
-              </h2>
-              <p className={styles.featuredSubtitle}>{featuredArticle.subtitle}</p>
-              <p className={styles.featuredExcerpt}>{featuredArticle.excerpt}</p>
-              
-              <div className={styles.featuredFooter}>
-                <div className={styles.authorMeta}>
-                  {featuredArticle.author.avatar && (
-                    <Image
-                      src={featuredArticle.author.avatar}
-                      alt={featuredArticle.author.name}
-                      width={44}
-                      height={44}
-                      className={styles.authorAvatar}
-                    />
-                  )}
-                  <div>
-                    <span className={styles.authorName}>{featuredArticle.author.name}</span>
-                    <span className={styles.authorRole}>{featuredArticle.author.role} • {featuredArticle.publishedDate}</span>
-                  </div>
+              <div className={styles.featuredContentCol}>
+                <div className={styles.featuredBadgeRow}>
+                  <span className={styles.featuredPill}>Top Story</span>
+                  <span className={styles.featuredCategory}>{featuredArticle.category}</span>
                 </div>
+                <h2 className={styles.featuredTitle}>
+                  <Link href={`/articles/${featuredArticle.slug}`}>
+                    {featuredArticle.title}
+                  </Link>
+                </h2>
+                <p className={styles.featuredSubtitle}>{featuredArticle.subtitle}</p>
+                <p className={styles.featuredExcerpt}>{featuredArticle.excerpt}</p>
+                
+                <div className={styles.featuredFooter}>
+                  <div className={styles.authorMeta}>
+                    {featuredArticle.author.avatar && (
+                      <Image
+                        src={featuredArticle.author.avatar}
+                        alt={featuredArticle.author.name}
+                        width={44}
+                        height={44}
+                        className={styles.authorAvatar}
+                      />
+                    )}
+                    <div>
+                      <span className={styles.authorName}>{featuredArticle.author.name}</span>
+                      <span className={styles.authorRole}>{featuredArticle.author.role} • {featuredArticle.publishedDate}</span>
+                    </div>
+                  </div>
 
-                <Link href={`/articles/${featuredArticle.slug}`} className={styles.readArticleBtn}>
-                  <span>Read Complete Article</span>
-                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                    <polyline points="12 5 19 12 12 19"></polyline>
-                  </svg>
-                </Link>
+                  <Link href={`/articles/${featuredArticle.slug}`} className={styles.readArticleBtn}>
+                    <span>Read Complete Story</span>
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+
+              <div className={styles.featuredImageCol}>
+                <Image
+                  src={featuredArticle.thumbnail}
+                  alt={featuredArticle.title}
+                  fill
+                  priority
+                  className={styles.featuredThumbnail}
+                />
               </div>
             </div>
           )}
@@ -141,35 +153,45 @@ export default function ArticlesPage() {
           <div className={styles.articlesGrid}>
             {filteredArticles.map((article) => (
               <article key={article.slug} className={styles.articleCard}>
-                <div className={styles.cardHeader}>
-                  <span className={styles.cardBadge}>{article.coverBadge}</span>
-                  <span className={styles.cardReadTime}>{article.readTime}</span>
+                <div className={styles.cardThumbnailWrapper}>
+                  <Image
+                    src={article.thumbnail}
+                    alt={article.title}
+                    fill
+                    className={styles.cardThumbnail}
+                  />
+                  <span className={styles.cardBadgeOverlay}>{article.coverBadge}</span>
                 </div>
 
-                <div className={styles.cardCategory}>{article.category}</div>
+                <div className={styles.cardBody}>
+                  <div className={styles.cardHeader}>
+                    <span className={styles.cardCategory}>{article.category}</span>
+                    <span className={styles.cardReadTime}>{article.readTime}</span>
+                  </div>
 
-                <h3 className={styles.cardTitle}>
-                  <Link href={`/articles/${article.slug}`}>
-                    {article.title}
-                  </Link>
-                </h3>
+                  <h3 className={styles.cardTitle}>
+                    <Link href={`/articles/${article.slug}`}>
+                      {article.title}
+                    </Link>
+                  </h3>
 
-                <p className={styles.cardExcerpt}>{article.excerpt}</p>
+                  <p className={styles.cardExcerpt}>{article.excerpt}</p>
 
-                <div className={styles.cardTags}>
-                  {article.tags.slice(0, 3).map((tag) => (
-                    <span key={tag} className={styles.tagChip}>#{tag}</span>
-                  ))}
-                </div>
+                  <div className={styles.cardTags}>
+                    {article.tags.slice(0, 3).map((tag) => (
+                      <span key={tag} className={styles.tagChip}>#{tag}</span>
+                    ))}
+                  </div>
 
-                <div className={styles.cardFooter}>
-                  <span className={styles.cardDate}>{article.publishedDate}</span>
-                  <Link href={`/articles/${article.slug}`} className={styles.cardLink}>
-                    <span>Read Article</span>
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </Link>
+                  <div className={styles.cardFooter}>
+                    <span className={styles.cardDate}>{article.publishedDate}</span>
+                    <Link href={`/articles/${article.slug}`} className={styles.cardLink}>
+                      <span>Read Article</span>
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}

@@ -3,13 +3,22 @@ export interface ArticleSection {
   paragraphs: string[];
   bulletPoints?: string[];
   callout?: string;
+  image?: {
+    url: string;
+    caption: string;
+  };
+}
+
+export interface GalleryImage {
+  url: string;
+  caption: string;
 }
 
 export interface Article {
   slug: string;
   title: string;
   subtitle: string;
-  category: 'Engineering & Compounding' | 'Fleet Maintenance' | 'Industry & Sustainability';
+  category: 'Engineering & Compounding' | 'Fleet Maintenance' | 'Industry & Sustainability' | 'Global Events & Trade';
   publishedDate: string;
   readTime: string;
   author: {
@@ -18,14 +27,118 @@ export interface Article {
     avatar?: string;
   };
   featured?: boolean;
-  excerpt: string;
+  thumbnail: string;
   coverBadge: string;
+  excerpt: string;
   keyTakeaways: string[];
   sections: ArticleSection[];
+  galleryImages?: GalleryImage[];
   tags: string[];
 }
 
 export const articles: Article[] = [
+  {
+    slug: 'autoways-represents-sri-lanka-middle-east-rubber-and-tyre-expo-2025-sharjah',
+    title: 'Autoways Represents Sri Lanka at Middle East Rubber and Tyre Expo 2025 in Sharjah',
+    subtitle: 'Showcasing Sri Lankan precured retread rubber, solid tyres, and precision inner flaps on the global stage under the national export brand "Your Vital Island".',
+    category: 'Global Events & Trade',
+    publishedDate: 'June 25, 2025',
+    readTime: '5 min read',
+    author: {
+      name: 'Autoways Corporate Communications',
+      role: 'International Trade & Export Affairs',
+      avatar: '/images/ceo_avatar.png'
+    },
+    featured: true,
+    thumbnail: '/images/expo/expo_7.jpg',
+    coverBadge: 'International Expo Highlight',
+    excerpt: 'Autoways Private Limited represented Sri Lanka’s rubber manufacturing industry at the Middle East Rubber and Tyre Expo 2025 in Sharjah Expo Centre, UAE, establishing vital global partnerships.',
+    keyTakeaways: [
+      'Autoways represented Sri Lanka at the prestigious Middle East Rubber and Tyre Expo 2025 held from 17 to 19 June 2025 at the Sharjah Expo Centre, UAE.',
+      'Part of the official Sri Lankan Pavilion organized by the Sri Lanka Export Development Board (EDB) and the Sri Lanka Consulate General under the national export brand "Your Vital Island".',
+      'Showcased locally engineered retread rubber belts, solid tyres, high-density tyre inner flaps, and automotive rubber components.',
+      'Attended a premier business networking event hosted by the Sri Lanka Business Council of the Emirates at Pullman Dubai Creek City Centre with top diplomats and international buyers.'
+    ],
+    galleryImages: [
+      {
+        url: '/images/expo/expo_7.jpg',
+        caption: 'Autoways exhibition booth and technical team presenting tyre rebuilding capabilities at Sharjah Expo Centre.'
+      },
+      {
+        url: '/images/expo/expo_6.jpg',
+        caption: 'Engaging with international buyers and trade representatives at the official Sri Lankan Pavilion.'
+      },
+      {
+        url: '/images/expo/expo_3.jpg',
+        caption: 'Autoways representative addressing the Sri Lanka Business Council of the Emirates at Pullman Dubai Creek City Centre.'
+      },
+      {
+        url: '/images/expo/expo_1.jpg',
+        caption: 'The Autoways delegation alongside H.E. Arusha Cooray, Ambassador-designate of Sri Lanka to the UAE, and Mr. Alexi Gunasekera, Consul General-designate.'
+      },
+      {
+        url: '/images/expo/expo_4.jpg',
+        caption: 'Bilateral trade discussions regarding export opportunities for Sri Lankan rubber products in the GCC region.'
+      },
+      {
+        url: '/images/expo/expo_5.jpg',
+        caption: 'Networking with international delegates and industry leaders at the Dubai business forum.'
+      },
+      {
+        url: '/images/expo/expo_2.jpg',
+        caption: 'Strategic deliberations on expanding retread rubber belts and flaps into Middle Eastern logistics markets.'
+      }
+    ],
+    tags: ['Sharjah Expo 2025', 'EDB Sri Lanka', 'Middle East Trade', 'Tyre Retreading', 'Global Exports'],
+    sections: [
+      {
+        heading: '1. Representing Sri Lankan Manufacturing in Sharjah',
+        paragraphs: [
+          'Autoways Private Limited was proud to participate in the Middle East Rubber and Tyre Expo 2025, held from 17 to 19 June 2025 at the prestigious Sharjah Expo Centre, UAE, as part of the official Sri Lankan Pavilion.',
+          'The Sri Lankan Pavilion was organized by the Sri Lanka Export Development Board (EDB) in close collaboration with the Sri Lanka Consulate General in the UAE, under the prestigious national export banner “Your Vital Island”. The landmark initiative brought together 10 leading Sri Lankan SME companies from the rubber products sector to showcase locally manufactured products and explore high-potential trade opportunities across the Middle Eastern and GCC markets.'
+        ],
+        callout: '"From the Heart of Sri Lanka to the Roads of the World: Taking our 30+ year retreading legacy and chemical precision to international fleet operators in the UAE and beyond."'
+      },
+      {
+        heading: '2. Showcasing the Strength of Sri Lankan Rubber Industry',
+        paragraphs: [
+          'The participating Sri Lankan companies presented a comprehensive and diverse range of rubber products, including solid industrial tyres, precured retread rubber belts, heavy-duty inner flaps, moulded rubber products, industrial rubber sheets, sports goods, and precision automotive components.',
+          'For Autoways, the international exhibition provided an unparalleled platform to present its advanced capabilities in cold and hot tyre retreading, specialized tyre repairs, precision cushion gum bonding, and flap manufacturing, while connecting directly with global fleet managers, distributors, and rubber compounding professionals.'
+        ],
+        bulletPoints: [
+          'Solid tyres and precured retread belts engineered to resist extreme desert temperatures and heavy axle loads.',
+          'Heavy commercial tyre inner flaps (15”, 16”, and 20”) offering heat dissipation and tube puncture prevention.',
+          'Certified eco-conscious tyre rebuilding processes supporting corporate circular economy initiatives.'
+        ]
+      },
+      {
+        heading: '3. Connecting with International Businesses & Global Buyers',
+        paragraphs: [
+          'The Middle East Rubber and Tyre Expo brought together leading manufacturers, exporters, SMEs, and international buyers from Asia, Europe, and the Arab world.',
+          'For a Sri Lankan manufacturing pioneer such as Autoways, participating in an international exhibition of this magnitude was an essential strategic step to introduce our products to a wider global audience, benchmark against emerging global tyre recycling trends, and cultivate long-term supply agreements across the Middle Eastern logistics sector.'
+        ]
+      },
+      {
+        heading: '4. High-Level Business Networking in Dubai',
+        paragraphs: [
+          'As part of the official trade programme, a high-level business networking summit was held by the Sri Lanka Business Council of the Emirates at the Pullman Dubai Creek City Centre.',
+          'The distinguished event brought together Sri Lankan business leaders and international trade delegates, providing an invaluable opportunity for participating Sri Lankan manufacturers to introduce their operations, exchange technical insights, and forge strategic commercial alliances.'
+        ],
+        bulletPoints: [
+          'Attended by H.E. Arusha Cooray, Ambassador-designate of Sri Lanka to the UAE.',
+          'Attended by Mr. Alexi Gunasekera, Consul General-designate to Dubai and the Northern Emirates.',
+          'Attended by Ms. Thakshila N. Arnolda, Head of Chancery & Minister Counsellor, along with prominent leaders from the international business community.'
+        ]
+      },
+      {
+        heading: '5. A Valuable Milestone for Autoways and National Industry',
+        paragraphs: [
+          'Autoways’ active representation at the Middle East Rubber and Tyre Expo 2025 marks an important milestone in representing Sri Lankan precision manufacturing on the world stage.',
+          'The experience provided deep exposure to the Middle Eastern rubber and tyre ecosystem while opening doors for collaborative joint ventures. Autoways looks forward to building on these fruitful connections, expanding export channels, and continuing to elevate our engineering standards in rubber manufacturing, retreading, and custom chemical compound formulations.'
+        ]
+      }
+    ]
+  },
   {
     slug: 'science-of-sustainable-tyre-retreading-chemical-compounding',
     title: 'The Science of Sustainable Tyre Retreading: How Precision Chemical Compounding Extends Casing Lifespan',
@@ -38,7 +151,8 @@ export const articles: Article[] = [
       role: 'Rubber Chemical Compounding Division',
       avatar: '/images/ceo_avatar.png'
     },
-    featured: true,
+    featured: false,
+    thumbnail: '/images/article_compounding.jpg',
     coverBadge: 'Technical Deep Dive',
     excerpt: 'Discover how precision compounding, Banbury internal mixers, and formulated cushion gum provide up to 50% cost savings for commercial fleets while drastically reducing carbon footprint.',
     keyTakeaways: [
@@ -106,6 +220,7 @@ export const articles: Article[] = [
       avatar: '/images/rd_avatar.png'
     },
     featured: false,
+    thumbnail: '/images/article_flaps.jpg',
     coverBadge: 'Component Engineering',
     excerpt: 'A comprehensive engineering overview on how 15", 16", and 20" rubber inner flaps isolate inner tubes from abrasive metal rim edges, preventing friction punctures and pressure drops.',
     keyTakeaways: [
@@ -153,6 +268,7 @@ export const articles: Article[] = [
       avatar: '/images/engineer_avatar.png'
     },
     featured: false,
+    thumbnail: '/images/article_treads.jpg',
     coverBadge: 'Tread Catalogue Guide',
     excerpt: 'Analyze the performance trade-offs between directional ribs, deep-lug traction designs, and multi-angle siping to optimize fleet cost-per-kilometer.',
     keyTakeaways: [

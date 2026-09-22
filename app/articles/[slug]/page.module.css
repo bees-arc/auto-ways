@@ -121,12 +121,92 @@
   align-items: start;
 }
 
-.contentColumn {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-lg);
-  padding: 44px;
+.coverImageContainer {
+  position: relative;
+  width: 100%;
+  height: 440px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 36px;
   box-shadow: var(--card-shadow);
+}
+
+.coverImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Event Gallery */
+.gallerySection {
+  margin: 48px 0;
+  padding-top: 36px;
+  border-top: 1px solid var(--card-border);
+}
+
+.galleryHeader {
+  margin-bottom: 24px;
+}
+
+.galleryBadge {
+  display: inline-block;
+  background-color: rgba(190, 27, 35, 0.1);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.galleryTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.galleryDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.galleryCard {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  transition: var(--transition-smooth);
+}
+
+.galleryCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.galleryImgWrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.galleryImg {
+  object-fit: cover;
+}
+
+.galleryCaption {
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  background-color: #ffffff;
 }
 
 /* Takeaways Card */

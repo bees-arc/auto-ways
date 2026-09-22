@@ -432,25 +432,35 @@ export default function Home() {
           <div className={styles.articlesHomeGrid}>
             {articles.slice(0, 3).map((article) => (
               <article key={article.slug} className={styles.homeArticleCard}>
-                <div className={styles.homeArticleHeader}>
-                  <span className={styles.homeArticleBadge}>{article.coverBadge}</span>
-                  <span className={styles.homeArticleReadTime}>{article.readTime}</span>
+                <div className={styles.homeArticleThumbnailWrapper}>
+                  <Image
+                    src={article.thumbnail}
+                    alt={article.title}
+                    fill
+                    className={styles.homeArticleThumbnail}
+                  />
+                  <span className={styles.homeArticleBadgeOverlay}>{article.coverBadge}</span>
                 </div>
-                <span className={styles.homeArticleCategory}>{article.category}</span>
-                <h3 className={styles.homeArticleTitle}>
-                  <Link href={`/articles/${article.slug}`}>
-                    {article.title}
-                  </Link>
-                </h3>
-                <p className={styles.homeArticleExcerpt}>{article.excerpt}</p>
-                <div className={styles.homeArticleFooter}>
-                  <span className={styles.homeArticleDate}>{article.publishedDate}</span>
-                  <Link href={`/articles/${article.slug}`} className={styles.homeArticleLink}>
-                    <span>Read Article</span>
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                  </Link>
+                <div className={styles.homeArticleBody}>
+                  <div className={styles.homeArticleHeader}>
+                    <span className={styles.homeArticleCategory}>{article.category}</span>
+                    <span className={styles.homeArticleReadTime}>{article.readTime}</span>
+                  </div>
+                  <h3 className={styles.homeArticleTitle}>
+                    <Link href={`/articles/${article.slug}`}>
+                      {article.title}
+                    </Link>
+                  </h3>
+                  <p className={styles.homeArticleExcerpt}>{article.excerpt}</p>
+                  <div className={styles.homeArticleFooter}>
+                    <span className={styles.homeArticleDate}>{article.publishedDate}</span>
+                    <Link href={`/articles/${article.slug}`} className={styles.homeArticleLink}>
+                      <span>Read Article</span>
+                      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </article>
             ))}

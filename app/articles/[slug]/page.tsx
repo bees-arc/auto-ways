@@ -71,13 +71,24 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
           <div className={styles.articleLayout}>
             {/* Article Content Column */}
             <article className={styles.contentColumn}>
+              {/* Cover Image Banner */}
+              <div className={styles.coverImageContainer}>
+                <Image
+                  src={article.thumbnail}
+                  alt={article.title}
+                  fill
+                  priority
+                  className={styles.coverImage}
+                />
+              </div>
+
               {/* Key Takeaways Box */}
               <div className={styles.takeawaysCard}>
                 <div className={styles.takeawaysHeader}>
                   <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                   </svg>
-                  <h3>Key Engineering Takeaways</h3>
+                  <h3>Key Highlights &amp; Takeaways</h3>
                 </div>
                 <ul className={styles.takeawaysList}>
                   {article.keyTakeaways.map((item, idx) => (
@@ -112,6 +123,36 @@ export default async function ArticleDetailPage({ params }: ArticlePageProps) {
                   </section>
                 ))}
               </div>
+
+              {/* Event Gallery */}
+              {article.galleryImages && article.galleryImages.length > 0 && (
+                <div className={styles.gallerySection}>
+                  <div className={styles.galleryHeader}>
+                    <span className={styles.galleryBadge}>Event Highlights</span>
+                    <h2 className={styles.galleryTitle}>Photo Gallery from Sharjah &amp; Dubai</h2>
+                    <p className={styles.galleryDesc}>
+                      Official delegation photographs, exhibition booth interactions, and bilateral business forums.
+                    </p>
+                  </div>
+                  <div className={styles.galleryGrid}>
+                    {article.galleryImages.map((img, gIdx) => (
+                      <figure key={gIdx} className={styles.galleryCard}>
+                        <div className={styles.galleryImgWrapper}>
+                          <Image
+                            src={img.url}
+                            alt={img.caption}
+                            fill
+                            className={styles.galleryImg}
+                          />
+                        </div>
+                        <figcaption className={styles.galleryCaption}>
+                          {img.caption}
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Tags Row */}
               <div className={styles.tagsContainer}>
