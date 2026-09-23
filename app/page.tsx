@@ -265,10 +265,10 @@ export default function Home() {
             <div className={styles.whyChooseImageCol}>
               <div className={styles.whyChooseImageContainer}>
                 <Image 
-                  src="/images/WhatsApp-Image-2025-06-15-at-1.08.28-AM.jpeg" 
-                  alt="Autoways Buffer Machinery" 
+                  src="/images/article_retread_machine.jpg" 
+                  alt="Autoways Advanced Tyre Retreading Facility" 
                   width={500} 
-                  height={380}
+                  height={625}
                   className={styles.whyChooseImage}
                 />
                 <div className={styles.whyChooseImageBadge}>
@@ -387,6 +387,7 @@ export default function Home() {
       </section>
 
       {/* 8. TESTIMONIALS SECTION */}
+      {/*
       <section className={`${styles.testimonialsSection} section`}>
         <div className="container">
           <div className={styles.sectionHeaderCentered}>
@@ -396,6 +397,7 @@ export default function Home() {
           <TestimonialSlider testimonials={testimonials} />
         </div>
       </section>
+      */}
 
       {/* 8.5 CLIENT LOGOS SECTION */}
       {/*

@@ -357,6 +357,7 @@ export default function About() {
       </section>
 
       {/* Testimonials */}
+      {/*
       <section className={`${styles.testimonialsSection} section`}>
         <div className="container">
           <div className={styles.sectionHeaderCentered}>
@@ -366,6 +367,7 @@ export default function About() {
           <TestimonialSlider testimonials={testimonials} />
         </div>
       </section>
+      */}
 
       {/* Client Logos */}
       {/*
