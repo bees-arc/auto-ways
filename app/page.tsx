@@ -206,19 +206,19 @@ export default function Home() {
               <div className={styles.aboutImageGrid}>
                 <div className={styles.gridImageWrapper1}>
                   <Image 
-                    src="/images/WhatsApp-Image-2025-06-15-at-1.08.29-AM.jpeg" 
-                    alt="Autoways Tyres Stack" 
-                    width={320} 
-                    height={220}
+                    src="/images/about_factory.jpg" 
+                    alt="Autoways Tyre Manufacturing Plant" 
+                    width={500} 
+                    height={380}
                     className={styles.gridImage}
                   />
                 </div>
                 <div className={styles.gridImageWrapper2}>
                   <Image 
-                    src="/images/unnamed-file.jpeg" 
-                    alt="Retreaded Tyres" 
-                    width={220} 
-                    height={280}
+                    src="/images/article_retread_machine.jpg" 
+                    alt="Autoways Precision Tyre Retreading" 
+                    width={400} 
+                    height={550}
                     className={styles.gridImage}
                   />
                 </div>
