@@ -66,7 +66,7 @@ export const articles: Article[] = [
       },
       {
         url: '/images/expo/expo_6.jpg',
-        caption: 'Engaging with international buyers and trade representatives at the official Sri Lankan Pavilion.'
+        caption: 'Explaining and presenting Autoways tyre and rubber solutions to officials from the Sri Lankan Embassy in Dubai at the official Sri Lankan Pavilion.'
       },
       {
         url: '/images/expo/expo_3.jpg',
@@ -74,7 +74,7 @@ export const articles: Article[] = [
       },
       {
         url: '/images/expo/expo_1.jpg',
-        caption: 'The Autoways delegation alongside H.E. Arusha Cooray, Ambassador-designate of Sri Lanka to the UAE, and Mr. Alexi Gunasekera, Consul General-designate.'
+        caption: 'The Autoways delegation alongside Mr. Suren Swaminathan (Chairman of the Board, Sri Lankan Business Council - United Arab Emirates), H.E. Arusha Cooray (Ambassador-designate of Sri Lanka to the UAE), and Mr. Alexi Gunasekera (Consul General-designate).'
       },
       {
         url: '/images/expo/expo_4.jpg',
@@ -125,6 +125,7 @@ export const articles: Article[] = [
           'The distinguished event brought together Sri Lankan business leaders and international trade delegates, providing an invaluable opportunity for participating Sri Lankan manufacturers to introduce their operations, exchange technical insights, and forge strategic commercial alliances.'
         ],
         bulletPoints: [
+          'Attended by Mr. Suren Swaminathan, Chairman of the Board, Sri Lankan Business Council - United Arab Emirates.',
           'Attended by H.E. Arusha Cooray, Ambassador-designate of Sri Lanka to the UAE.',
           'Attended by Mr. Alexi Gunasekera, Consul General-designate to Dubai and the Northern Emirates.',
           'Attended by Ms. Thakshila N. Arnolda, Head of Chancery & Minister Counsellor, along with prominent leaders from the international business community.'
