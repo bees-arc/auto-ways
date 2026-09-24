@@ -74,11 +74,11 @@ export const articles: Article[] = [
       },
       {
         url: '/images/expo/expo_1.jpg',
-        caption: 'The Autoways delegation alongside Mr. Suren Swaminathan (Chairman of the Board, Sri Lankan Business Council - United Arab Emirates), H.E. Arusha Cooray (Ambassador-designate of Sri Lanka to the UAE), and Mr. Alexi Gunasekera (Consul General-designate).'
+        caption: 'The Autoways delegation alongside Mr. Suren Swaminathan (Chairman of the Board, Sri Lankan Business Council - United Arab Emirates) and Mr. Alexi Gunasekera (Consul General-designate).'
       },
       {
         url: '/images/expo/expo_4.jpg',
-        caption: 'Bilateral trade discussions regarding export opportunities for Sri Lankan rubber products in the GCC region.'
+        caption: 'Bilateral trade discussions with H.E. Arusha Cooray (Ambassador-designate of Sri Lanka to the UAE) regarding export opportunities for Sri Lankan rubber products in the GCC region.'
       },
       {
         url: '/images/expo/expo_5.jpg',
